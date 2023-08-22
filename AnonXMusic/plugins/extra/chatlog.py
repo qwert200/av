@@ -1,4 +1,4 @@
-from pyrogram import Client, filters
+0from pyrogram import Client, filters
 from pyrogram.types import Message
 from config import SUPPORT_CHAT_ID
 from AnonXMusic import app
@@ -23,5 +23,5 @@ async def on_left_chat_member(_, message: Message):
         title = message.chat.title
         username = f"@{message.chat.username}" if message.chat.username else "ᴩʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
         chat_id = message.chat.id
-        left = f"✫ <b><u>ʟᴇғᴛ ɢʀᴏᴜᴘ :</u></b>\n\n**ᴄʜᴀᴛ ɪᴅ :** {chat_id}\n**ᴄʜᴀᴛ ᴜsᴇʀɴᴀᴍᴇ :** {username}\n**ᴄʜᴀᴛ ᴛɪᴛʟᴇ :** {title}\n\n**ʀᴇᴍᴏᴠᴇᴅ ʙʏ :** {remove_by}"
+        left = f"✫ <b><u>ʟᴇғᴛ ɢʀᴏᴜᴘ :</u></b>\n\n<b>ᴄʜᴀᴛ ɪᴅ :</b> `{chat_id}`\n<b>ᴄʜᴀᴛ ᴜsᴇʀɴᴀᴍᴇ :</b> {username}\n<b>ᴄʜᴀᴛ ᴛɪᴛʟᴇ :</b> {title}\n\n<b>ʀᴇᴍᴏᴠᴇᴅ ʙʏ :</b> {remove_by}"
         await new_message(SUPPORT_CHAT_ID, left)
