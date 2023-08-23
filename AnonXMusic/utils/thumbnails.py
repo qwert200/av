@@ -7,7 +7,6 @@ import aiohttp
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 from unidecode import unidecode
 from youtubesearchpython.__future__ import VideosSearch
-from AnonXMusic.assets import colors
 from AnonXMusic import app
 from config import YOUTUBE_IMG_URL
 
@@ -65,7 +64,6 @@ async def get_thumb(videoid):
                     await f.write(await resp.read())
                     await f.close()
                     
-        border = random.choice(colors)
         youtube = Image.open(f"cache/thumb{videoid}.png")
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
