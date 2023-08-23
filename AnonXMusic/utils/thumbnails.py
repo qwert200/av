@@ -6,7 +6,7 @@ import aiohttp
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 from unidecode import unidecode
 from youtubesearchpython.__future__ import VideosSearch
-
+from AnonXMusic.resource import colors
 from AnonXMusic import app
 from config import YOUTUBE_IMG_URL
 
@@ -63,7 +63,8 @@ async def get_thumb(videoid):
                     f = await aiofiles.open(f"cache/thumb{videoid}.png", mode="wb")
                     await f.write(await resp.read())
                     await f.close()
-
+                    
+        border = random.choice(colors)
         youtube = Image.open(f"cache/thumb{videoid}.png")
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
@@ -88,7 +89,7 @@ async def get_thumb(videoid):
         )
         draw.line(
             [(55, 660), (1220, 660)],
-            fill="red",
+            fill="white",
             width=5,
             joint="curve",
         )
@@ -99,13 +100,13 @@ async def get_thumb(videoid):
             width=15,
         )
         draw.text(
-            (36, 685),
+            (36, 670),
             "00:00",
             (255, 255, 255),
             font=font,
         )
         draw.text(
-            (1185, 685),
+            (1185, 670),
             f"{duration[:23]}",
             (255, 255, 255),
             font=font,
