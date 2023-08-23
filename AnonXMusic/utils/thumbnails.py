@@ -77,13 +77,13 @@ async def get_thumb(videoid):
         draw.text(
             (55, 560),
             f"{channel} | {views[:23]}",
-            (255, 0, 0),
-            font=arial,
+            (255, 255, 255),
+            font=font,
         )
         draw.text(
             (57, 600),
             clear(title),
-            (255, 0, 0),
+            (255, 255, 255),
             font=font,
         )
         draw.line(
@@ -94,21 +94,21 @@ async def get_thumb(videoid):
         )
         draw.ellipse(
             [(918, 648), (942, 672)],
-            outline="red",
-            fill="red",
+            outline="white",
+            fill="white",
             width=15,
         )
         draw.text(
             (36, 685),
             "00:00",
-            (255, 0, 0),
-            font=arial,
+            (255, 255, 255),
+            font=font,
         )
         draw.text(
             (1185, 685),
             f"{duration[:23]}",
-            (255, 0, 0),
-            font=arial,
+            (255, 255, 255),
+            font=font,
         )
         try:
             os.remove(f"cache/thumb{videoid}.png")
