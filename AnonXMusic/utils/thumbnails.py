@@ -78,12 +78,14 @@ async def get_thumb(videoid):
             (280, 540),
             f"{channel} | {views[:23]}",
             (255, 255, 255),
+            outline = "red",
             font=font,
         )
         draw.text(
             (50, 595),
             clear(title),
             (255, 255, 255),
+            outline = "red",
             font=font,
         )
         draw.line(
