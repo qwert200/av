@@ -72,10 +72,11 @@ async def get_thumb(videoid):
         background = enhancer.enhance(0.5)
         draw = ImageDraw.Draw(background)
         arial = ImageFont.truetype("AnonXMusic/assets/font2.ttf", 30)
-        font = ImageFont.truetype("AnonXMusic/assets/font.ttf", 30)
+        font = ImageFont.truetype("AnonXMusic/assets/font.ttf", 40)
+        font2 = ImageFont.truetype("AnonXMusic/assets/font.ttf", 30)
         draw.text((1100, 8), unidecode(app.name), fill="white", font=font)
         draw.text(
-            (55, 560),
+            (70, 560),
             f"{channel} | {views[:23]}",
             (255, 255, 255),
             font=font,
@@ -102,13 +103,13 @@ async def get_thumb(videoid):
             (36, 670),
             "00:00",
             (255, 255, 255),
-            font=font,
+            font=font2,
         )
         draw.text(
             (1185, 670),
             f"{duration[:23]}",
             (255, 255, 255),
-            font=font,
+            font=font2,
         )
         try:
             os.remove(f"cache/thumb{videoid}.png")
