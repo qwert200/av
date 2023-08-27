@@ -79,14 +79,14 @@ async def get_thumb(videoid):
             f"{channel} | {views[:23]}",
             (255, 255, 255),
             font=font,
-            stroke_fill="red",
+            outline="red",
         )
         draw.text(
             (50, 595),
             clear(title),
             (255, 255, 255),
             font=font,
-            stroke_fill="red",
+            outline="red",
         )
         draw.line(
             [(55, 660), (1220, 660)],
@@ -96,7 +96,7 @@ async def get_thumb(videoid):
         )
         draw.ellipse(
             [(918, 648), (942, 672)],
-            outline="white",
+            outline="red",
             fill="white",
             width=15,
         )
