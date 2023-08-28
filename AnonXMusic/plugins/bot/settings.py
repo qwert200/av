@@ -80,19 +80,31 @@ async def settings_cb(client, CallbackQuery, _):
     )
 
 
-@app.on_callback_query(filters.regex("settingsback_helper") & ~BANNED_USERS)
+@app.on_callback_query(
+    filters.regex("settingsback_helper") & ~BANNED_USERS
+)
 @languageCB
-async def settings_back_markup(client, CallbackQuery: CallbackQuery, _):
+async def settings_back_markup(
+    client, CallbackQuery: CallbackQuery, _
+):
     try:
         await CallbackQuery.answer()
     except:
         pass
-    if CallbackQuery.message.chat.type == ChatType.PRIVATE:
-        await app.resolve_peer(OWNER_ID)
-        OWNER = OWNER_ID
-        buttons = private_panel(_)
-        return await CallbackQuery.edit_message_text(
-            _["start_2"].format(CallbackQuery.from_user.mention, app.mention),
+    if CallbackQuery.message.chat.type == "private":
+        try:
+            await app.resolve_peer(OWNER_ID[0])
+            OWNER = OWNER_ID[0]
+        except:
+            OWNER = None
+        buttons = private_panel(_, app.username, OWNER)
+        return await CallbackQuery.edit_message_media(
+            InputMediaPhoto(
+                media=START_IMG_URL,
+                caption=_["start_2"].format(
+                    CallbackQuery.from_user.first_name, BOT_NAME
+                ),
+            ),
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
@@ -100,6 +112,7 @@ async def settings_back_markup(client, CallbackQuery: CallbackQuery, _):
         return await CallbackQuery.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(buttons)
         )
+
 
 
 @app.on_callback_query(
