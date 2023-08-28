@@ -111,7 +111,7 @@ async def get_thumb(videoid):
             font=arial,
         )
         draw.text(
-            (1185, 670),
+            (1180, 670),
             f"{duration[:23]}",
             (255, 255, 255),
             stroke_width=4,
