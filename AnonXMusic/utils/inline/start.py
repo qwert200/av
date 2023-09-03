@@ -32,7 +32,7 @@ def private_panel(_):
         [
             InlineKeyboardButton(
                 text="sᴜᴘᴘᴏʀᴛ", callback_data="gib_support"
-            )
+            ),
             InlineKeyboardButton(
                 text="sᴏᴜʀᴄᴇ", callback_data="gib_source")
         ],
