@@ -25,14 +25,16 @@ def private_panel(_):
             )
         ],
         [
-            InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_CHAT),
-            InlineKeyboardButton(text=_["S_B_6"], url=config.SUPPORT_CHANNEL),
+            InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=config.SUPPORT_CHAT),
+            InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url=f"https://t.me/Backup_Bosss"),
         ],
         [InlineKeyboardButton(text=_["S_B_4"], callback_data="settings_back_helper")],
         [
             InlineKeyboardButton(
-                text="sᴏᴜʀᴄᴇ", callback_data="gib_source"
+                text="sᴜᴘᴘᴏʀᴛ", callback_data="gib_support"
             )
+            InlineKeyboardButton(
+                text="sᴏᴜʀᴄᴇ", callback_data="gib_source")
         ],
     ]
     return buttons
