@@ -82,6 +82,26 @@ async def gib_repo(client, CallbackQuery, _):
         ),
     )
 
+@app.on_callback_query(filters.regex("gib_credit") & ~BANNED_USERS)
+@languageCB
+async def gib_repo(client, CallbackQuery, _):
+    await CallbackQuery.edit_message_media(
+        InputMediaPhoto(
+                media=START_IMG_URL,
+                caption=_["support_3"].format(
+                    CallbackQuery.from_user.mention, app.mention),
+            ),
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url=f"https://t.me/Backup_Bosss"),
+                    InlineKeyboardButton(text="ᴄʜɪᴛ ᴄʜᴀᴛ", url=f"https://t.me/Red_Wine_Oo")
+                ],
+                [InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data=f"settingsback_helper")]
+            ]
+        ),
+    )
+
 
 @app.on_callback_query(filters.regex("settings_helper") & ~BANNED_USERS)
 @languageCB
