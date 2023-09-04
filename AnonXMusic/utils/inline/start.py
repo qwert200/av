@@ -34,6 +34,9 @@ def private_panel(_):
                 text="sᴜᴘᴘᴏʀᴛ", callback_data="gib_support"
             ),
             InlineKeyboardButton(
+                text="ᴄʀᴇᴅɪᴛ", callback_data="gib_credit"
+            ),
+            InlineKeyboardButton(
                 text="sᴏᴜʀᴄᴇ", callback_data="gib_source")
         ],
     ]
