@@ -88,7 +88,7 @@ async def gib_repo(client, CallbackQuery, _):
     await CallbackQuery.edit_message_media(
         InputMediaPhoto(
                 media=START_IMG_URL,
-                caption=_["support_3"].format(
+                caption=_["support_2"].format(
                     CallbackQuery.from_user.mention, app.mention),
             ),
         reply_markup=InlineKeyboardMarkup(
