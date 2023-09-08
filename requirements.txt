@@ -3,7 +3,7 @@ aiohttp
 asyncio
 beautifulsoup4
 dnspython
-ffmpeg-python==4.2.9
+ffmpeg-python==0.2.0
 gitpython
 hachoir
 heroku3
