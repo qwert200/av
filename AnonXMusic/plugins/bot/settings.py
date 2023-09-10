@@ -57,10 +57,30 @@ async def gib_repo(client, CallbackQuery, _):
     await CallbackQuery.edit_message_media(
         InputMediaVideo("https://telegra.ph/file/6c30c3352d6d6a09f735e.mp4"),
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data=f"settingsback_helper")]]
+            [
+                [
+                    InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data=f"settingsback_helper"),
+                    InlineKeyboardButton(text="ɢᴇᴛ ʀᴇᴘᴏ", callback_data=f"gib_rempo")
+                ]
+            ]
         ),
     )
 
+
+@app.on_callback_query(filters.regex("gib_rempo") & ~BANNED_USERS)
+@languageCB
+async def gib_repo(client, CallbackQuery, _):
+    await CallbackQuery.edit_message_media(
+        InputMediaPhoto(
+                media=START_IMG_URL,
+                caption=_["support_3"].format(
+                    CallbackQuery.from_user.mention, app.mention),
+        ),
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data=f"settingsback_helper")]]
+        ),
+    )
+    
 
 @app.on_callback_query(filters.regex("gib_support") & ~BANNED_USERS)
 @languageCB
