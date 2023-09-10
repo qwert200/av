@@ -59,7 +59,7 @@ async def gib_repo(client, CallbackQuery, _):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data=f"settingsback_helper"),
+                    InlineKeyboardButton(text="ʜᴏᴍᴇ", callback_data=f"settingsback_helper"),
                     InlineKeyboardButton(text="ɢᴇᴛ ʀᴇᴘᴏ", callback_data=f"gib_rempo")
                 ]
             ]
@@ -77,7 +77,7 @@ async def gib_repo(client, CallbackQuery, _):
                     CallbackQuery.from_user.mention, app.mention),
         ),
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data=f"settingsback_helper")]]
+            [[InlineKeyboardButton(text="ʜᴏᴍᴇ", callback_data=f"settingsback_helper")]]
         ),
     )
     
@@ -97,7 +97,7 @@ async def gib_repo(client, CallbackQuery, _):
                     InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=f"https://t.me/Red_Wine_Op"),
                     InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/Kalakar_Sangram")
                 ],
-                [InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data=f"settingsback_helper")]
+                [InlineKeyboardButton(text="ʜᴏᴍᴇ", callback_data=f"settingsback_helper")]
             ]
         ),
     )
@@ -117,7 +117,7 @@ async def gib_repo(client, CallbackQuery, _):
                     InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url=f"https://t.me/Backup_Bosss"),
                     InlineKeyboardButton(text="ᴄʜɪᴛ ᴄʜᴀᴛ", url=f"https://t.me/Red_Wine_Op")
                 ],
-                [InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data=f"settingsback_helper")]
+                [InlineKeyboardButton(text="ʜᴏᴍᴇ", callback_data=f"settingsback_helper")]
             ]
         ),
     )
