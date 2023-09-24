@@ -95,7 +95,7 @@ async def gib_repo(client, CallbackQuery, _):
             [
                 [
                     InlineKeyboardButton(text="ɢʀᴏᴜᴘ", url=f"https://t.me/Red_Wine_Op"),
-                    InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/Kalakar_Sangram")
+                    InlineKeyboardButton(text="ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/AvengerNews")
                 ],
                 [InlineKeyboardButton(text="ʜᴏᴍᴇ", callback_data=f"settingsback_helper")]
             ]
