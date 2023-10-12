@@ -230,7 +230,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             run = await CallbackQuery.message.reply_photo(
                 photo=img,
                 caption=_["stream_1"].format(
-                    f"https://t.me/{app.username}?start=info_{videoid}",
+                    f"https://t.me/{app.username}?mstart=info_{videoid}",
                     title[:23],
                     duration,
                     user,
@@ -266,7 +266,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             run = await CallbackQuery.message.reply_photo(
                 photo=img,
                 caption=_["stream_1"].format(
-                    f"https://t.me/{app.username}?start=info_{videoid}",
+                    f"https://t.me/{app.username}?mstart=info_{videoid}",
                     title[:23],
                     duration,
                     user,
@@ -337,7 +337,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                 run = await CallbackQuery.message.reply_photo(
                     photo=img,
                     caption=_["stream_1"].format(
-                        f"https://t.me/{app.username}?start=info_{videoid}",
+                        f"https://t.me/{app.username}?mstart=info_{videoid}",
                         title[:23],
                         duration,
                         user,
