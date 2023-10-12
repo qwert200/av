@@ -67,7 +67,7 @@ def stream_markup_timer(_, chat_id, played, dur):
             )
         ],
         [
-            InlineKeyboardButton(text="Speed", callback_data=f"PanelMarkup None|{chat_id}",
+            InlineKeyboardButton(text="Speed", callback_data=f"PanelMarkup None|{chat_id}"),
         ],
         [InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/Red_Wine_Op"),
          InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/AvengerNews"),
