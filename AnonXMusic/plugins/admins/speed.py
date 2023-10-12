@@ -40,7 +40,7 @@ async def playback(cli, message: Message, _, chat_id):
 @languageCB
 async def del_back_playlist(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
-    callback_request = callback_data.split(SpeedUP, 1)[1]
+    callback_request = callback_data.split(None, 1)[1]
     chat, speed = callback_request.split("|")
     chat_id = int(chat)
     if not await is_active_chat(chat_id):
