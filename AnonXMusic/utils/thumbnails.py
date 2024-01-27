@@ -112,9 +112,9 @@ async def get_thumb(videoid):
     background = enhancer.enhance(0.6)
     draw = ImageDraw.Draw(background)
     arial = ImageFont.truetype("AnonXMusic/assets/font2.ttf", 30)
-    font = ImageFont.truetype("AnonXMusic/assets/font.ttf", 30)
+    font = ImageFont.truetype("AnonXMusic/assets/font.ttf", 40)
     title_font = ImageFont.truetype("AnonXMusic/assets/font3.ttf", 45)
-    draw.text((490, 20), unidecode(app.name), fill="white",stroke_width=5,stroke_fill="red", font=font)
+    draw.text((500, 20), unidecode(app.name), fill="white",stroke_width=5,stroke_fill="red", font=font)
 
 
     circle_thumbnail = crop_center_circle(youtube, 400, 20)
