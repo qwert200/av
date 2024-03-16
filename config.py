@@ -23,9 +23,6 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 10000))
 # Chat id of a group for logging bot's activities
 LOGGER_ID = int(getenv("LOGGER_ID", None))
 
-# Support chat id
-SUPPORT_CHAT_ID = int(getenv("SUPPORT_CHAT_ID"))
-
 # Get this value from @FallenxBot on Telegram by /id
 OWNER_ID = int(getenv("OWNER_ID", 1711510822))
 
@@ -37,7 +34,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/OfficialSangram/AvengerMusic",
+    "https://github.com/qwert200/av",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
